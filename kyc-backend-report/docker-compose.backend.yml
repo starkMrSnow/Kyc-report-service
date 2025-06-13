@@ -19,6 +19,15 @@ services:
       - backendnet
     restart: unless-stopped
 
+  eureka-server:
+    image: stanleyotieno/eureka-server
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - backendnet
+    restart: unless-stopped
+
   backend:
     build:
       context: .
@@ -27,11 +36,14 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/kyc_report_db
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: stan
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
     ports:
       - "8080:8080"
     depends_on:
       postgres:
         condition: service_healthy
+      eureka-server:      
+        condition: service_started
     networks:
       - backendnet
     restart: unless-stopped
