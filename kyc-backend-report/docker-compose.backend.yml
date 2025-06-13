@@ -1,0 +1,44 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: kyc_postgres
+    environment:
+      POSTGRES_DB: kyc_report_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: stan
+    ports:
+      - "5435:5432"  
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - backendnet
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: .
+    container_name: kyc_backend
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/kyc_report_db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: stan
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - backendnet
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+
+networks:
+  backendnet:
+    driver: bridge

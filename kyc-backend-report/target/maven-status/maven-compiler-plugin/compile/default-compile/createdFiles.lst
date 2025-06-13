@@ -1,0 +1,13 @@
+com/example/kyc_backend_report/config/WebConfig.class
+com/example/kyc_backend_report/controller/AdminController.class
+com/example/kyc_backend_report/dto/customerPdfDetails.class
+com/example/kyc_backend_report/dto/CustomerDetailsDto.class
+com/example/kyc_backend_report/repository/CustomerRepository.class
+com/example/kyc_backend_report/dto/CustomerIdNameDto.class
+com/example/kyc_backend_report/config/PdfService.class
+com/example/kyc_backend_report/dto/CustomerProfileDto.class
+com/example/kyc_backend_report/model/Customer.class
+com/example/kyc_backend_report/KycBackendReportApplication.class
+com/example/kyc_backend_report/util/PdfGenerator.class
+com/example/kyc_backend_report/dto/CustomerDto.class
+com/example/kyc_backend_report/config/WebConfig$1.class

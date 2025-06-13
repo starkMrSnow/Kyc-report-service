@@ -1,0 +1,12 @@
+/home/stanley-otieno/ADMIN-REPORT/kyc-backend-report/src/main/java/com/example/kyc_backend_report/KycBackendReportApplication.java
+/home/stanley-otieno/ADMIN-REPORT/kyc-backend-report/src/main/java/com/example/kyc_backend_report/config/PdfService.java
+/home/stanley-otieno/ADMIN-REPORT/kyc-backend-report/src/main/java/com/example/kyc_backend_report/config/WebConfig.java
+/home/stanley-otieno/ADMIN-REPORT/kyc-backend-report/src/main/java/com/example/kyc_backend_report/controller/AdminController.java
+/home/stanley-otieno/ADMIN-REPORT/kyc-backend-report/src/main/java/com/example/kyc_backend_report/dto/CustomerDetailsDto.java
+/home/stanley-otieno/ADMIN-REPORT/kyc-backend-report/src/main/java/com/example/kyc_backend_report/dto/CustomerDto.java
+/home/stanley-otieno/ADMIN-REPORT/kyc-backend-report/src/main/java/com/example/kyc_backend_report/dto/CustomerIdNameDto.java
+/home/stanley-otieno/ADMIN-REPORT/kyc-backend-report/src/main/java/com/example/kyc_backend_report/dto/CustomerProfileDto.java
+/home/stanley-otieno/ADMIN-REPORT/kyc-backend-report/src/main/java/com/example/kyc_backend_report/dto/customerPdfDetails.java
+/home/stanley-otieno/ADMIN-REPORT/kyc-backend-report/src/main/java/com/example/kyc_backend_report/model/Customer.java
+/home/stanley-otieno/ADMIN-REPORT/kyc-backend-report/src/main/java/com/example/kyc_backend_report/repository/CustomerRepository.java
+/home/stanley-otieno/ADMIN-REPORT/kyc-backend-report/src/main/java/com/example/kyc_backend_report/util/PdfGenerator.java
